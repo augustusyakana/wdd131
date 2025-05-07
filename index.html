@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home page for WDD 131 - Dynamic Web Fundamentals, by Augustus Yakana">
+    <meta name="author" content="Augustus Yuki Yakana">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/modal.js" defer></script>
+    <title>WDD 131 - Dynamic Web Fundamentals - Augustus Yakana</title>
+</head>
+
+<body>
+    <header>
+        <h1>WDD 131 - Dynamic Web Fundamentals /<span> Augustus Yuki Yakana</span></h1>
+        <nav>
+            <a href="https://www.linkedin.com/in/augustusyakana/" target="_blank">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng&id=p27#p27"
+                target="_blank">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+    <main>
+        <section class="card aboutme">
+            <h3>About Me</h3>
+            <div id="intro">
+                <p>My name is Augustus Yakana. Thirty years old, from Micronesia, blessed with a wife and 4 kids. I’m a
+                    dedicated software development student at BYU–Pathway Worldwide, currently expanding my skills
+                    in machine learning and artificial intelligence through an additional tech program. I’m passionate
+                    about building technology that solves real-world problems and brings lasting value to underserved
+                    communities. My long-term goal is to bring advanced tech solutions to Micronesia, helping bridge the
+                    region’s digital gap. I believe in learning by doing and constantly pushing beyond limitations.</p>
+                <img src="images/profile.webp" alt="photo of author">
+            </div>
+            <h4>Pohnpei, FSM</h4>
+            <div id="pohnpei">
+                <img src="images/pohnpei.webp" alt="">
+                <p>Pohnpei is one of the four states of the Federated States of Micronesia, located in the western
+                    Pacific Ocean. Known for
+                    its lush rainforests, waterfalls, and ancient ruins like Nan Madol, it's often called the “Garden
+                    Island” of Micronesia.
+                    The island has a rich cultural heritage, with deep-rooted traditions and a strong sense of
+                    community. While it faces
+                    modern challenges like limited infrastructure, Pohnpei remains a place of natural beauty and
+                    cultural pride.</p>
+            </div>
+        </section>
+        <section class="card resources">
+            <h3>Web Dev Resources</h3>
+            <div>
+                <ul>
+                    <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a> ★★★★☆ 4.8</li>
+                    <li><a href="https://www.freecodecamp.org" target="_blank">FreeCodeCamp</a> ★★★★☆ 4.2</li>
+                    <li><a href="https://www.theodinproject.com" target="_blank">The Odin Project</a> ★★★★☆ 4.5</li>
+                    <li><a href="https://zerotomastery.io" target="_blank">Zero to Mastery Academy</a> ★★★★☆ 4.6</li>
+                    <li><a href="https://dev.to" target="_blank">Dev.to</a> ★★★★☆ 4.0</li>
+                    <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a> ★★★★☆ 4.1</li>
+                    <li><a href="https://www.codecademy.com" target="_blank">Codecademy</a> ★★★☆☆ 3.8</li>
+                    <li><a href="https://css-tricks.com" target="_blank">CSS Tricks</a> ★★★★☆ 4.5</li>
+                </ul>
+                <button class="open">Ratings Sources</button>
+                <dialog class="modal">
+                    <ol>
+                        <li>
+                            <p><strong>G2</strong></p>
+                            <p>Business software and tech course reviews</p>
+                            <a href="https://www.g2.com">🔗</a>
+                        </li>
+                        <li>
+                            <p><strong>Trustpilot</strong></p>
+                            <p>General consumer reviews, including online education platforms</p>
+                            <a href="https://www.trustpilot.com">🔗</a>
+                        </li>
+                        <li>
+                            <p><strong>Course Report</strong></p>
+                            <p>Specifically for coding bootcamps and online tech education</p>
+                            <a href="https://www.coursereport.com">🔗</a>
+                        </li>
+                        <li>
+                            <p><strong>Class Central</strong></p>
+                            <p>Aggregates course reviews and ratings from various learning sites</p>
+                            <a href="https://www.classcentral.com">🔗</a>
+                        </li>
+                        <li>
+                            <p><strong>Reddit (r/learnprogramming, r/webdev, etc.)</strong></p>
+                            <p>Real user feedback and discussions about course quality</p>
+                            <a href="https://www.reddit.com/r/learnprogramming">🔗</a>
+                        </li>
+                        <li>
+                            <p><strong>YouTube (reviews from content creators)</strong></p>
+                            <p>Many dev YouTubers give honest course breakdowns and comparisons</p>
+                            <a href="https://www.youtube.com">🔗</a>
+                        </li>
+                    </ol>
+                    <span class="close">✖</span>
+                </dialog>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <p>© <span id="currentyear"></span> | Augustus Yakana | Micronesia</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
