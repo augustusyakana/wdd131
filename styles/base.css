@@ -46,18 +46,25 @@ nav a:hover {
 
 main {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 70% 30%;
     padding: 1rem;
 }
 
 .card {
-    width: 90%;
     margin: 0 auto;
     box-shadow: 3px 3px 10px rgb(85, 77, 77);
     /* background-color: var(--umber); */
     border-radius: 10px;
     overflow: hidden;
 
+}
+
+.resources {
+    width: 95%;
+}
+
+.aboutme {
+    width: 95%;
 }
 
 .card h2 {
