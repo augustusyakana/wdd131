@@ -24,7 +24,7 @@ header {
 
 header span {
     font-size: 20px;
-    color: var(--umber);
+    color: var(--gray);
     font-family: var(--serif);
 }
 
@@ -61,7 +61,7 @@ main {
 
 }
 
-.card h3 {
+.card h2 {
     background-color: var(--aero);
     padding: 1rem;
     margin-top: 0;
