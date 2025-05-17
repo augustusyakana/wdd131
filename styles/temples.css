@@ -110,6 +110,11 @@ figure {
     align-items: center;
     justify-content: space-between;
     gap: .5rem;
+
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(23, 23, 23);
+    padding: 1rem;
+    background-color: #4b4c51;
 }
 
 figure img {
@@ -122,15 +127,14 @@ figcaption {
 
 main {
     background-color: #2b2c31;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
     color: white;
     gap: 1rem;
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    max-width: 1500px;
+    max-width: 1300px;
     margin: 0 auto;
+    padding: 1rem;
 }
 
 footer {
