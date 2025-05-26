@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Augustus Yuki Yakana">
+    <meta name="description" content="Island of pohnpei information website - SPA">
+    <script src="scripts/place.js" defer></script>
+    <link rel="stylesheet" href="styles/place.css">
+    <title>Island of Pohnpei</title>
+</head>
+
+<body>
+    <header>
+        <h1>POHNPEI, FSM</h1>
+    </header>
+    <main>
+        <section id="hero">
+            <picture>
+                <source media="(max-width: 600px)" srcset="/images/place-small.webp">
+                <source media="(max-width: 1200px)" srcset="/images/place-med.webp">
+                <img src="/images/place-large.webp" alt="photo of kepirohi waterfalls">
+            </picture>
+        </section>
+        <section class="cards data">
+            <h2>Data</h2>
+            <div class="info">
+                <p>Area: <span>129 sq mi</span></p>
+                <p>Population: <span>36,832</span></p>
+                <p>Capital: <span>Kolonia</span></p>
+                <p>Languages: <span>Pohnpeian, English, Mwokillese, Pingelapese, Ngatikese, Nukuoran, Kapinga
+                        Mwarangi</span></p>
+                <p>Currency: <span>United States Dollor</span></p>
+                <p>Time Zone: <span>GMT +11</span></p>
+                <p>Calling Code: <span>+691</span></p>
+                <p>Internet TLD: <span>.fm</span></p>
+            </div>
+
+        </section>
+        <section class="cards weather">
+
+            <div>
+                <h2>Weather </h2>
+                <img id="weathericon" src="images/weather-lrg.svg" alt="weather icon">
+            </div>
+            <div class="info">
+                <p>Temperature: <span>86˚F</span></p>
+                <p>Conditions: <span>Cloudy</span></p>
+                <p>Wind: <span>11 mph</span></p>
+                <p>Wind Chill: <span id="windchill"></span></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>©<span id="copyright"></span> Augustus Yakana | Pohnpei, FSM</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
