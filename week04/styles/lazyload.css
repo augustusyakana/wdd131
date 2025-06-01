@@ -19,7 +19,15 @@ h2 {
     font-size: 2rem;
 }
 
-p {
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+picture p {
     width: 400px;
     font-size: 18px;
 }

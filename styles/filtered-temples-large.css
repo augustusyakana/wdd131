@@ -1,0 +1,42 @@
+@media screen and (min-width: 600px) {
+    .ham-menu {
+        display: none;
+    }
+
+    .off-screen {
+        right: 0;
+        position: relative;
+        max-width: none;
+        height: 3.5rem;
+        transition: none;
+
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 0;
+        align-content: center;
+        background-color: inherit;
+    }
+
+    .off-screen a:hover {
+
+        text-shadow: 3px 3px 10px rgb(0, 0, 0);
+    }
+
+    .current {
+
+        border-bottom: 4px solid rgb(242, 219, 219);
+        padding-top: 19px;
+        padding-bottom: 15px;
+    }
+
+    .temples {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+
+    main h2 {
+        grid-column: 1/-1;
+    }
+
+}
