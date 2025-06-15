@@ -45,17 +45,12 @@ function getRandomKeyword() {
     return randomQuery;
 }
 
-
-
 document.querySelector('.genBtn').addEventListener('click', async () => {
-
     let keyword = getRandomKeyword()
     const result = await getData(keyword)
-
     currentRecipe = result;
     clearContainer(recipeContainer);
     buildRecipe(result, recipeContainer)
-
 
 })
 
