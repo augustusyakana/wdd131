@@ -134,9 +134,9 @@ nav {
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr;
-    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     text-align: center;
     justify-items: center;
     background-image: linear-gradient(var(--gunmetal), var(--lightgreen));
@@ -145,6 +145,7 @@ nav {
 .recipeCard {
     padding: .5rem;
     color: var(--timber);
+    padding-bottom: 80px;
 }
 
 .genBtn {
@@ -159,8 +160,9 @@ nav {
     font-weight: bold;
     color: var(--gunmetal);
     position: fixed;
-    bottom: 4%;
-    margin: 0 auto;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1000;
 }
 
