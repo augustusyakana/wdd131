@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Mwesel is a recipe app designed to help users quickly discover what to cook. It generates random recipes from TheMealDB API and allows users to save their favorites in localStorage. It’s especially helpful for couples or individuals who often struggle with deciding what to make for meals. The app is mobile-first and built for simplicity and speed. ">
+    <meta name="author" content="Augustus Yuki Yakana">
+    <script src="scripts/nav.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="images/breadfruit.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/small.css">
+    <title>Mwesel | Home</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="name">
+                <h1>MWESEL</h1>
+            </div>
+            <div class="ham-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="off-screen ">
+            <ul>
+                <li class="current"><a href="index.html">Home</a></li>
+                <li><a href="">Recipes</a></li>
+                <li><a href="">Favorites</a></li>
+            </ul>
+
+            <div class="footer">
+                <p>©<span id="copyright"></span> | Augustus Yuki Yakana</p>
+                <p id="lastmod"></p>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <section class="container">
+            <section class="recipeCard">
+                <h3>Click the button below to generate random recipes</h3>
+            </section>
+
+            <button class="genBtn">Generate Recipe</button>
+        </section>
+
+    </main>
+</body>
+
+</html>
