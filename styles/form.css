@@ -1,19 +1,32 @@
+/* https: //coolors.co/2c1320-e8eef2-d6c9c9-004346 */
+
+:root {
+    --background: #2c1320;
+    --fonts: #e8eef2;
+    --heading: #d6c9c9;
+    --accent: #004346;
+    --fontFamily: "Montserrat",
+        sans-serif;
+}
+
 body {
     padding: 0;
     margin: 0;
+    font-family: var(--fontFamily);
+    color: var(--fonts);
 }
 
 header,
 footer {
-    background-color: rgb(28, 28, 57);
+    background-color: var(--background);
     padding: .7rem;
-    color: white;
+    color: var(--heading);
     text-align: center;
 }
 
 
 main {
-    background-color: grey;
+    background-color: var(--accent);
 
 }
 
@@ -24,8 +37,8 @@ form {
 form label {
     display: block;
     padding-top: 1rem;
-    color: rgb(0, 0, 0);
     font-size: 17px;
+    color: var(--fonts);
 }
 
 form input[type="text"],
@@ -36,20 +49,20 @@ form input[type="date"],
 form input[type="number"],
 select,
 textarea {
-    padding-top: 1rem;
+    margin-top: .6rem;
     display: block;
     border-radius: 6px;
     padding: .75rem;
     width: 100%;
     max-width: 400px;
     appearance: none;
+    font-family: var(--fontFamily);
 }
 
 form input[type="radio"],
 form input[type="checkbox"] {
     display: inline;
     margin-right: .5rem;
-
 }
 
 form div {
@@ -75,20 +88,22 @@ form input[type="submit"] {
     max-width: 400px;
     padding: .8rem;
     margin: 0, 2%, 2rem, 2%;
-    box-shadow: 1px 1px 5px rgb(118, 111, 111);
+    box-shadow: 1px 1px 5px var(--heading);
     font-size: 16px;
-    background-image: linear-gradient(to left, rgb(5, 187, 51), rgb(0, 0, 0));
+    background-image: linear-gradient(to left, rgb(5, 187, 51), var(--background));
     color: white;
+    font-family: var(--fontFamily);
 }
 
 #reviewed {
     min-height: 50vh;
-    color: white;
+    color: var(--fonts);
     text-align: center;
     align-content: center;
     text-wrap: wrap;
+    font-family: var(--fontFamily);
 }
 
 a {
-    color: white;
+    color: var(--fonts);
 }
