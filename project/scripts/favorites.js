@@ -16,20 +16,22 @@ function displayFavorites() {
             dlt.textContent = "❌"
             dlt.setAttribute('class', 'fave-dlt')
             dlt.addEventListener('click', () => {
-                // Remove from favorites array
-                favorites = favorites.filter(fav => fav.id !== item.id);
-
-                // Update localStorage
-                localStorage.setItem("favorites", JSON.stringify(favorites));
-
-                // Remove the element from the DOM
-                div.remove();
-                displayFavorites();
+                deletediv(item, div);
             });
             div.appendChild(dlt)
             favoritesContainer.appendChild(div);
         })
     }
+}
+
+function deletediv(item, div) {
+    // Remove from favorites array
+    let newList = favorites.filter(fav => fav.title !== item.title);
+    favorites = newList;
+    // Update localStorage
+    localStorage.setItem("favorites", JSON.stringify(newList));
+    // Remove the element from the DOM
+    div.remove();
 }
 
 displayFavorites();
