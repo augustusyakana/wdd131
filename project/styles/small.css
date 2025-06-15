@@ -170,6 +170,8 @@ nav {
     transform: translateX(-10%)
 }
 
+
+
 .genBtn,
 .fave {
     border: none;
@@ -194,6 +196,10 @@ nav {
 
 .recipeCard ul {
     text-align: left;
+}
+
+.favorite {
+    background-color: red;
 }
 
 .ingredients {

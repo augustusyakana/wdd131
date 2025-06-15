@@ -4,6 +4,9 @@ document.querySelector('#copyright').textContent = new Date().getFullYear();
 document.querySelector('#lastmod').textContent = `Last Modified: ${document.lastModified}`
 const recipeContainer = document.querySelector('.recipeCard')
 const container = document.querySelector('.container');
+const favebtn = document.querySelector('.fave');
+
+let currentRecipe;
 
 const recipeKeywords = [
     // Proteins
@@ -61,6 +64,7 @@ document.querySelector('.genBtn').addEventListener('click', async () => {
         const response = await fetch(url, options);
         const data = await response.json();
         const result = data[0];
+        currentRecipe = result;
         clearContainer();
         buildRecipe(result)
 
@@ -114,3 +118,29 @@ function clearContainer() {
 
 
 
+function savetoFavorite(item) {
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    if (!item) {
+        alert('Generate a recipe first!')
+    } else {
+        const exists = favorites.some(fav => fav.title === item.title)
+
+        if (!exists) {
+
+            if (item) {
+                console.log(item)
+                favorites.push(item)
+                localStorage.setItem('favorites', JSON.stringify(favorites));
+                alert('Added to favorites!');
+            }
+
+        } else {
+            alert('Already in favorites');
+        }
+    }
+}
+
+
+favebtn.addEventListener('click', () => {
+    savetoFavorite(currentRecipe);
+})
