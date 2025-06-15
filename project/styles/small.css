@@ -29,25 +29,13 @@ li {
     font-family: var(--sans);
 }
 
-nav img {
-    width: 100%;
-    transform: scale(1.27);
-}
-
-#img_container {
-    display: block;
-    width: 5rem;
-    text-align: left;
-}
-
 nav {
-    text-align: center;
+    text-align: left;
 }
 
 #name {
     /* border: 1px solid white; */
-    align-content: center;
-    margin: 0 auto;
+    align-content: left;
 }
 
 #name h1 {
@@ -90,6 +78,7 @@ nav {
 nav {
     padding: 1rem;
     display: flex;
+    align-items: baseline;
     background-color: var(--gunmetal);
 }
 
@@ -171,6 +160,7 @@ nav {
     color: var(--gunmetal);
     position: fixed;
     bottom: 4%;
+    margin: 0 auto;
     z-index: 1000;
 }
 
