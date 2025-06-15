@@ -31,7 +31,10 @@ function deletediv(item, div) {
     // Update localStorage
     localStorage.setItem("favorites", JSON.stringify(newList));
     // Remove the element from the DOM
+
     div.remove();
+    favoritesContainer.innerHTML = '';
+    displayFavorites();
 }
 
 displayFavorites();
