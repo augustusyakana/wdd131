@@ -152,18 +152,34 @@ nav {
     width: 60%;
     max-width: 400px;
     border: none;
-    border-radius: .5rem;
-    padding: 1rem .5rem;
-    font-family: var(--sans);
-    background-color: var(--lightblue);
-    box-shadow: 3px 5px 10px var(--gunmetal);
+
+
+
     font-weight: bold;
     color: var(--gunmetal);
+    left: 10%;
+    transform: translateX(-10%);
+    padding: 1rem .5rem;
+}
+
+.fave {
+    width: 20%;
+    max-width: 200px;
+    padding: .8rem .5rem;
+    right: 10%;
+    transform: translateX(-10%)
+}
+
+.genBtn,
+.fave {
+    border: none;
     position: fixed;
     bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    box-shadow: 3px 5px 10px var(--gunmetal);
     z-index: 1000;
+    border-radius: .5rem;
+    font-family: var(--sans);
+    background-color: var(--lightblue);
 }
 
 .footer {
