@@ -4,20 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuickBites Site Plan</title>
+    <meta name="description" content="Quickbites site plan page">
+    <meta name="author" content="Augustus Yakana">
+    <script src="scripts/siteplan.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <title>Mwesel Site Plan</title>
 </head>
 
 <body>
     <header>
-        <h1>QuickBites Site Plan</h1>
+        <h1>Mwesel</h1>
+        <h3>Site Plan</h3>
+        <p>Mwesel means "eat" in Pingelapese. This name captures the core purpose of the app—helping people decide what
+            to eat by
+            offering recipe ideas in a fun, convenient way. It's simple, cultural, and relevant.</p>
     </header>
     <main>
         <section class="purpose">
-            <h2>Purpose</h2>
-            <p></p>
+            <h2>Site Purpose</h2>
+            <p>Mwesel is a recipe app designed to help users quickly discover what to cook. It generates random recipes
+                from TheMealDB
+                API and allows users to save their favorites in localStorage. It’s especially helpful for couples or
+                individuals who
+                often struggle with deciding what to make for meals. The app is mobile-first and built for simplicity
+                and speed.</p>
+        </section>
+        <section class="scenarios">
+            <h2>Scenarios</h2>
+            <ul>
+                <li>What should we cook for dinner tonight?</li>
+                <li>Can I save a recipe to cook again later?</li>
+                <li>Are there fun themes like taco tuesdays or throwback thursdays?</li>
+            </ul>
+        </section>
+        <section class="schema">
+            <h2>Color Schema</h2><span><em>I am also using black and white to prevent any contrast issues</em></span>
+            <ul>
+                <li id="gunmetal">Gunmetal - #232c33 <em>(for bg/font/etc)</em></li>
+                <li id="timber">Timber - #d6c9c9 <em>(for accents/bg/etc)</em></li>
+                <li id="lightblue">lightblue - #e8eef2 <em>(for fonts/accents/etc)</em></li>
+                <li id="lightgreen">lightgreen - #5a7d7c <em>(for bg/accents/etc)</em></li>
+            </ul>
+        </section>
+        <section class="typography">
+            <h2>Typography</h2>
+            <ul>
+                <li id="sans">Sans: "Montserrat", sans-serif</li>
+                <li id="serif">Serif: "Merriweather", serif</li>
+            </ul>
+        </section>
+        <section class="wireframe">
+            <h2>Wireframes</h2>
+            <img src="images/wireframe.webp" alt="wireframe">
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <p>©<span id="copyright"></span> | Augustus Yuki Yakana</p>
+        <p id="lastmodified"></p>
+    </footer>
 </body>
 
 </html>

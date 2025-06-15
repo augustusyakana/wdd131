@@ -1,0 +1,133 @@
+/* https: //coolors.co/5a7d7c-e8eef2-d6c9c9-232c33 */
+
+:root {
+    --lightgreen: #5a7d7c;
+    --lightblue: #e8eef2;
+    --timber: #d6c9c9;
+    --gunmetal: #232c33;
+
+    --serif: "Merriweather",
+        serif;
+    --sans: "Montserrat",
+        sans-serif
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--serif);
+}
+
+p,
+span,
+li {
+    font-family: var(--sans);
+}
+
+header {
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--lightblue);
+    color: var(--gunmetal);
+}
+
+
+header p {
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+    text-wrap: wrap;
+}
+
+.purpose,
+.scenarios,
+.schema,
+.typography,
+.wireframe {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.purpose {
+    color: var(--lightblue);
+    background-color: var(--gunmetal);
+}
+
+.scenarios {
+    background-color: var(--lightgreen);
+    color: white;
+}
+
+.schema li {
+    margin-top: .5rem;
+    max-width: 400px;
+    padding: .7rem;
+    border-radius: 10px;
+}
+
+.schema li::marker {
+    color: black;
+}
+
+#gunmetal {
+    color: white;
+    background-color: var(--gunmetal);
+}
+
+#timber {
+    color: black;
+    background-color: var(--timber);
+}
+
+#lightblue {
+    color: black;
+    background-color: var(--lightblue);
+}
+
+#lightgreen {
+    color: white;
+    background-color: var(--lightgreen);
+}
+
+.typography {
+    background-color: var(--timber);
+    color: var(--gunmetal);
+}
+
+.typography li {
+    font-size: 20px;
+}
+
+#sans {
+    font-family: var(--sans);
+}
+
+#serif {
+    font-family: var(--serif);
+}
+
+.wireframe {
+    background-color: var(--gunmetal);
+    color: white;
+}
+
+.wireframe img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+footer {
+    background-color: var(--lightblue);
+    color: var(--gunmetal);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
