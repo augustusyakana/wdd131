@@ -215,3 +215,27 @@ nav {
 
     border-bottom: 1px solid var(--lightgreen);
 }
+
+.favoritesContainer {
+    color: white;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.faveCard {
+    width: 90%;
+    margin: 0 auto;
+    padding: .5rem;
+    box-shadow: 2px 2px 10px black;
+
+    border-radius: .6rem;
+
+}
+
+.fave-dlt {
+    padding: .5rem 2rem;
+    margin-top: .5rem;
+    background: var(--gunmetal);
+}
