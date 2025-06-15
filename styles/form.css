@@ -1,0 +1,94 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header,
+footer {
+    background-color: rgb(28, 28, 57);
+    padding: .7rem;
+    color: white;
+    text-align: center;
+}
+
+
+main {
+    background-color: grey;
+
+}
+
+form {
+    padding: 1rem;
+}
+
+form label {
+    display: block;
+    padding-top: 1rem;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+}
+
+form input[type="text"],
+form input[type="tel"],
+form input[type="email"],
+form input[type="url"],
+form input[type="date"],
+form input[type="number"],
+select,
+textarea {
+    padding-top: 1rem;
+    display: block;
+    border-radius: 6px;
+    padding: .75rem;
+    width: 100%;
+    max-width: 400px;
+    appearance: none;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+    display: inline;
+    margin-right: .5rem;
+
+}
+
+form div {
+    padding-top: 1rem;
+    font-size: 17px;
+}
+
+form input:required,
+form select:required {
+    border-bottom: 10px solid red;
+}
+
+form input:required:valid,
+form select:required:valid {
+    border-bottom: 10px solid green;
+}
+
+form input[type="submit"] {
+    margin-top: 1rem;
+    border: none;
+    border-radius: 6px;
+    width: 96%;
+    max-width: 400px;
+    padding: .8rem;
+    margin: 0, 2%, 2rem, 2%;
+    box-shadow: 1px 1px 5px rgb(118, 111, 111);
+    font-size: 16px;
+    background-image: linear-gradient(to left, rgb(5, 187, 51), rgb(0, 0, 0));
+    color: white;
+}
+
+#reviewed {
+    min-height: 50vh;
+    color: white;
+    text-align: center;
+    align-content: center;
+    text-wrap: wrap;
+}
+
+a {
+    color: white;
+}

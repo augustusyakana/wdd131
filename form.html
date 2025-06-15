@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/form.js" defer></script>
+    <link rel="stylesheet" href="styles/form.css">
+    <title>Product Review Form</title>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+        <p id="submits"></p>
+    </header>
+    <main>
+
+
+
+        <form method="get" action="review.html">
+            <label> Product Name
+                <select name="product" id="productInput" required>
+                    <option value="" disabled selected>Please Choose &#9662;</option>
+
+                </select>
+            </label>
+
+            <div>Overall Rating</div>
+            <label><input id="one" type="radio" name="rating" value="1" required> ☆</label>
+            <label><input id="two" type="radio" name="rating" value="2" required> ☆☆</label>
+            <label><input id="three" type="radio" name="rating" value="3" required> ☆☆☆</label>
+            <label><input id="four" type="radio" name="rating" value="4" required> ☆☆☆☆</label>
+            <label><input id="five" type="radio" name="rating" value="5" required> ☆☆☆☆☆</label>
+
+            <label>Date of Installation
+                <input type="date" id="date" name="date" required>
+            </label>
+
+            <div>Which features did you find useful in the product? <em>(Check all that apply)</em></div>
+            <label><input id="feature_durability" type="checkbox" name="durability" value="yes"> Durability</label>
+            <label><input id="feature_ease" type="checkbox" name="ease of use" value="yes"> Ease of Use</label>
+            <label><input id="feature_performance" type="checkbox" name="performance" value="yes"> Perfromance</label>
+            <label><input id="feature_design" type="checkbox" name="design" value="yes"> Design</label>
+
+            <label> Written Review <em>(Optional)</em>
+                <textarea name="review" id="review"></textarea>
+            </label>
+
+            <label>Your Name <em>(optional)</em> <input type="text" name="name" id="name"></label>
+
+            <input type="submit" value="Complete Review">
+        </form>
+    </main>
+    <footer>
+        <p>©<span id="copyright"></span> Augustus Yakana</p>
+        <p id="lastmodified"></p>
+    </footer>
+</body>
+
+</html>
