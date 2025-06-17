@@ -70,6 +70,7 @@ export function buildRecipe(result, recipeContainer) {
 
     const link = document.createElement('a');
     link.href = result.strYoutube;
+    link.target = '_blank'
     link.setAttribute('class', 'ytLink')
     link.textContent = 'Watch Tutorial';
 
