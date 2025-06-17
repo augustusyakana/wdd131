@@ -13,7 +13,7 @@ function displayFavorites() {
             div.setAttribute('class', 'faveCard')
             buildRecipe(item, div)
             const dlt = document.createElement('button');
-            dlt.textContent = "❌"
+            dlt.textContent = "Remove From Favorites"
             dlt.setAttribute('class', 'fave-dlt')
             dlt.addEventListener('click', () => {
                 deletediv(item, div);
@@ -26,7 +26,7 @@ function displayFavorites() {
 
 function deletediv(item, div) {
     // Remove from favorites array
-    let newList = favorites.filter(fav => fav.title !== item.title);
+    let newList = favorites.filter(fav => fav.idMeal !== item.idMeal);
     favorites = newList;
     // Update localStorage
     localStorage.setItem("favorites", JSON.stringify(newList));

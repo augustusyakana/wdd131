@@ -1,35 +1,53 @@
-export async function getData(keyword) {
-    const url = `https://recipe-by-api-ninjas.p.rapidapi.com/v1/recipe?query=${keyword}`;
-    const options = {
-        method: 'GET',
-        headers: {
-            'x-rapidapi-key': '1f9f149f47mshf80b07667dc70efp11c707jsn5e41c5b893f9',
-            'x-rapidapi-host': 'recipe-by-api-ninjas.p.rapidapi.com'
-        }
-    };
-
+export async function getData() {
     try {
-        const response = await fetch(url, options);
+        const response = await fetch('https://www.themealdb.com/api/json/v1/1/random.php')
         const data = await response.json();
-        console.log(data[0])
-        return data[0];
-
+        if (data && data.meals && data.meals.length > 0) {
+            const meal = data.meals[0];
+            // console.log(data.meals[0].strMealThumb)
+            return meal;
+        } else {
+            console.log('no meal found')
+        }
     } catch (error) {
-        console.error("error", error);
+        console.error('Error fetching data:', error);
+    };
+}
+
+function getIngredients(meal) {
+    const ingredients = [];
+
+    for (let i = 1; i <= 20; i++) {
+        const ingredient = meal[`strIngredient${i}`];
+        const measure = meal[`strMeasure${i}`];
+
+        if (ingredient && ingredient.trim()) {
+            ingredients.push(`${measure ? measure : ''} ${ingredient}`.trim())
+        }
     }
+
+    return ingredients;
 }
 
 
 export function buildRecipe(result, recipeContainer) {
+
+    const img = document.createElement('img');
+    img.setAttribute('src', result.strMealThumb)
+    img.setAttribute('alt', `photo of ${result.strMeal}`)
+    img.setAttribute('class', 'mealImg')
+
     const title = document.createElement('h3')
-    title.textContent = result.title;
+    title.textContent = result.strMeal;
     title.setAttribute('class', 'recipe-title')
 
+    const category = document.createElement('p');
+    category.textContent = `Category: ${result.strCategory}`;
+    category.setAttribute('class', 'category')
+
+    const ingredients = getIngredients(result);
     const ingredientDiv = document.createElement('div');
     ingredientDiv.setAttribute('class', 'ingredients');
-
-
-    let ingredients = result.ingredients.split('|');
     let ingredientTitle = document.createElement('h3');
     ingredientTitle.textContent = 'Ingredients';
     const ul = document.createElement('ul');
@@ -40,20 +58,20 @@ export function buildRecipe(result, recipeContainer) {
     })
     ingredientDiv.appendChild(ul);
 
-    const servings = document.createElement('p');
-    servings.innerHTML = `<h3>Servings </h3> ${result.servings}`;
     const instructionsTitle = document.createElement('h3');
     instructionsTitle.textContent = 'Instructions'
     const instructionsDiv = document.createElement('div');
     instructionsDiv.setAttribute('class', 'instructions')
     const instructions = document.createElement('p');
-    instructions.innerHTML = `${result.instructions}`;
+    instructions.innerHTML = `${result.strInstructions}`;
     instructionsDiv.appendChild(instructions)
 
+    recipeContainer.appendChild(img)
     recipeContainer.appendChild(title);
+    recipeContainer.appendChild(category)
     recipeContainer.appendChild(ingredientTitle)
     recipeContainer.appendChild(ingredientDiv)
-    recipeContainer.appendChild(servings)
+    // recipeContainer.appendChild(servings)
     recipeContainer.appendChild(instructionsTitle)
     recipeContainer.appendChild(instructionsDiv)
 }
@@ -71,12 +89,12 @@ export function savetoFavorite(item, favorites) {
     if (!item) {
         alert('Generate a recipe first!')
     } else {
-        const exists = favorites.some(fav => fav.title === item.title)
+        const exists = favorites.some(fav => fav.idMeal === item.idMeal)
 
         if (!exists) {
 
             if (item) {
-                console.log(item)
+                // console.log(item)
                 favorites.push(item)
                 localStorage.setItem('favorites', JSON.stringify(favorites));
                 alert('Added to favorites!');

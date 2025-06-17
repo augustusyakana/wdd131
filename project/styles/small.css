@@ -134,6 +134,10 @@ nav {
     transform: translate(-50%, 50%) rotate(-45deg);
 }
 
+.current {
+    font-weight: bold;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -233,10 +237,35 @@ nav {
 
     border-radius: .6rem;
 
+    background: linear-gradient(var(--lightgreen), var(--gunmetal));
+
 }
 
 .fave-dlt {
     padding: .5rem 2rem;
     margin-top: .5rem;
     background: var(--gunmetal);
+    color: rgb(241, 68, 68);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 2px 5px black;
+}
+
+.fave-dlt:hover {
+    background-color: var(--lightgreen);
+    color: var(--gunmetal);
+}
+
+.mealImg {
+    width: 60%;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    box-shadow: 2px 2px 5px rgb(59, 1, 1);
+}
+
+.category {
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: -20px;
 }
