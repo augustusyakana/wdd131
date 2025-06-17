@@ -1,4 +1,6 @@
 export async function getData() {
+
+
     try {
         const response = await fetch('https://www.themealdb.com/api/json/v1/1/random.php')
         const data = await response.json();
@@ -66,14 +68,21 @@ export function buildRecipe(result, recipeContainer) {
     instructions.innerHTML = `${result.strInstructions}`;
     instructionsDiv.appendChild(instructions)
 
+    const link = document.createElement('a');
+    link.href = result.strYoutube;
+    link.setAttribute('class', 'ytLink')
+    link.textContent = 'Watch Tutorial';
+
     recipeContainer.appendChild(img)
     recipeContainer.appendChild(title);
     recipeContainer.appendChild(category)
     recipeContainer.appendChild(ingredientTitle)
     recipeContainer.appendChild(ingredientDiv)
     // recipeContainer.appendChild(servings)
+    recipeContainer.appendChild(link);
     recipeContainer.appendChild(instructionsTitle)
     recipeContainer.appendChild(instructionsDiv)
+
 }
 
 export function clearContainer(recipeContainer) {

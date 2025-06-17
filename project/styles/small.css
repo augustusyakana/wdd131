@@ -269,3 +269,15 @@ nav {
     font-weight: bold;
     margin-top: -20px;
 }
+
+.ytLink {
+    background-color: var(--lightblue);
+    padding: 5px 3rem;
+    display: block;
+    text-decoration: none;
+    width: 120px;
+    margin: 10px auto;
+    font-family: var(--sans);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+}
