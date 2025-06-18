@@ -66,6 +66,7 @@ function displayPreviews(meals) {
         const img = document.createElement('img');
         img.src = meal.strMealThumb;
         img.alt = `photo of ${meal.strMeal}`;
+        img.loading = 'lazy';
         img.setAttribute('class', 'previewImg');
 
         const title = document.createElement('h2');

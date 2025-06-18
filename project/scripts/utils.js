@@ -37,6 +37,7 @@ export function buildRecipe(result, recipeContainer) {
     const img = document.createElement('img');
     img.setAttribute('src', result.strMealThumb)
     img.setAttribute('alt', `photo of ${result.strMeal}`)
+    img.loading = 'lazy';
     img.setAttribute('class', 'mealImg')
 
     const titleCat = document.createElement('div');
