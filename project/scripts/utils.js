@@ -39,6 +39,9 @@ export function buildRecipe(result, recipeContainer) {
     img.setAttribute('alt', `photo of ${result.strMeal}`)
     img.setAttribute('class', 'mealImg')
 
+    const titleCat = document.createElement('div');
+    titleCat.setAttribute('class', 'titleCat');
+
     const title = document.createElement('h3')
     title.textContent = result.strMeal;
     title.setAttribute('class', 'recipe-title')
@@ -46,6 +49,9 @@ export function buildRecipe(result, recipeContainer) {
     const category = document.createElement('p');
     category.textContent = `Category: ${result.strCategory}`;
     category.setAttribute('class', 'category')
+
+    titleCat.appendChild(title);
+    titleCat.appendChild(category);
 
     const ingredients = getIngredients(result);
     const ingredientDiv = document.createElement('div');
@@ -60,10 +66,11 @@ export function buildRecipe(result, recipeContainer) {
     })
     ingredientDiv.appendChild(ul);
 
-    const instructionsTitle = document.createElement('h3');
-    instructionsTitle.textContent = 'Instructions'
+
     const instructionsDiv = document.createElement('div');
     instructionsDiv.setAttribute('class', 'instructions')
+    const instructionsTitle = document.createElement('h3');
+    instructionsTitle.textContent = 'Instructions'
     const instructions = document.createElement('p');
     instructions.innerHTML = `${result.strInstructions}`;
     instructionsDiv.appendChild(instructions)
@@ -75,8 +82,7 @@ export function buildRecipe(result, recipeContainer) {
     link.textContent = 'Watch Tutorial';
 
     recipeContainer.appendChild(img)
-    recipeContainer.appendChild(title);
-    recipeContainer.appendChild(category)
+    recipeContainer.appendChild(titleCat)
     recipeContainer.appendChild(ingredientTitle)
     recipeContainer.appendChild(ingredientDiv)
     // recipeContainer.appendChild(servings)

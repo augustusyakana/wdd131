@@ -141,9 +141,10 @@ nav {
 .container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 90vh;
     text-align: center;
     justify-items: center;
+    color: white;
     background-image: linear-gradient(var(--gunmetal), var(--lightgreen));
 }
 
@@ -175,7 +176,18 @@ nav {
     transform: translateX(-10%)
 }
 
+.ingredients::-webkit-scrollbar,
+.instructions::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+}
 
+.ingredients::-webkit-scrollbar-thumb,
+.instructions::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: linear-gradient(#5a7d7c5e, #232c334c);
+    overflow: hidden;
+}
 
 .genBtn,
 .fave {
@@ -280,4 +292,42 @@ nav {
     font-family: var(--sans);
     border-radius: 5px;
     box-shadow: 2px 2px 5px black;
+}
+
+
+
+.previewImg {
+    width: 80%;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.previewCard {
+    width: 90%;
+    margin: .5rem auto;
+    padding: .5rem;
+
+    background: linear-gradient(var(--lightgreen), var(--gunmetal));
+    box-shadow: 1px 1px 3px black;
+
+    border-radius: 10px;
+}
+
+.container>p {
+    width: 80%;
+    margin: .5rem auto;
+    font-size: 12px;
+    margin-top: -1rem;
+    margin-bottom: 20px;
+}
+
+.recMealContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .5rem;
+}
+
+footer {
+    display: none;
 }
